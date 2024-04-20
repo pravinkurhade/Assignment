@@ -3,20 +3,15 @@ package com.pk.assignment.presentation.home
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.paging.Pager
-import androidx.paging.PagingConfig
-import androidx.paging.PagingData
 import com.pk.assignment.data.common.Resources
 import com.pk.assignment.domain.model.RecordItem
 import com.pk.assignment.domain.use_cases.GetRecordsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
-
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(private val getRecordsUseCase: GetRecordsUseCase): ViewModel() {
